@@ -58,6 +58,9 @@ let createNote = function () {
     }else{
         let id = document.getElementById('err');
         let string = '';
+
+        id.innerHTML = string;
+        
         notes.data.push(value);
     }
 
