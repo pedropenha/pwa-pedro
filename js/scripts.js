@@ -60,7 +60,7 @@ let createNote = function () {
         let string = '';
 
         id.innerHTML = string;
-        
+
         notes.data.push(value);
     }
 
