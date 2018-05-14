@@ -50,10 +50,19 @@ let createNote = function () {
     let input = document.querySelector('#form-add-note input[type="text"]');
     let value = input.value;
 
-    notes.data.push(value);
+    if(value === ''){
+        let id = document.getElementById('err');
+        let string = 'Não foi possivel adicionar uma anotação, insira um conteudo';
+
+        id.innerHTML = string;
+    }else{
+        let id = document.getElementById('err');
+        let string = '';
+        notes.data.push(value);
+    }
 
     input.value = "";
-}
+};
 
 updateList();
 
